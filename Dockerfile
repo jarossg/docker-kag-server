@@ -1,8 +1,10 @@
-FROM ubuntu:14.04
+FROM ubuntu:18.04
 MAINTAINER galan
 
 ENV KAG_HOME /opt/kag-server
 ENV KAG_URL http://dl.kag2d.com/kag-linux32-dedicated-release.tar.gz
+
+RUN apt-get update && apt-get upgrade
 
 RUN apt-get install -y wget && \
     wget ${KAG_URL} -P /opt && \
