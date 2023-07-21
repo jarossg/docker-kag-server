@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  kag:
+    build: .
+    container_name: kag
+    ports:
+      - 50301:50301
+
+    restart: unless-stopped
